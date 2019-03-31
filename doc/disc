@@ -1,0 +1,12 @@
+/usr/local/go/src/hello (from $GOROOT)
+/Users/karen/go/src/hello (from $GOPATH)
+
+gvm
+/Users/karen/.gvm
+
+==
+go build
+go install
+go doc
+gofmt
+go test

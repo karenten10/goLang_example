@@ -1,0 +1,71 @@
+=== 在mac設定GOPATH ===
+
+是時候說GOPATH了
+
+有了GOPATH
+我們就可以把hello.go從
+/Users/karen/go/src/hello
+移到我們的範例資料夾example2裡面
+
+什麼是GOPATH呢
+
+這個就類似於java的CLASSPATH
+如果你不知道java的CLASSPATH
+也沒關係
+跳過java CLASSPATH
+簡單來說
+就是告訴Go要到哪裡去找你寫好的程式
+
+那要怎麼設定GOPATH呢
+我們就開始吧
+
+1. 在終端機輸入
+
+touch ~/.bash_profile; open ~/.bash_profile
+
+2. 就會跳出一個記事本
+
+	請在內容的最下面
+	加上這一行
+
+	export GOPATH=[範例資料夾]
+
+	以我自己來說
+	就是這樣
+	export GOPATH=/Users/karen/Documents/karen的全部資料夾/程式教學文件/golang/example2
+
+3. 將記事本的檔案存檔
+	
+4. 關掉記事本
+
+5. 關掉終端機
+	要整個關掉喔
+	就是到工具列按Quit
+	Quit的中文我不知道是顯示什麼
+	反正你知道我的意思
+	就是終端機徹底全部關完的意思
+
+6. 然後重新打開終端機
+
+	輸入：echo $GOPATH
+
+	應該會跑出來我們剛剛設定的
+	/Users/karen/Documents/karen的全部資料夾/程式教學文件/golang/example2
+
+7. 接著到範例資料夾裡面
+	新增以下的路徑
+
+	example2/src/hello
+	然後把hello.go搬進去
+
+	最後看起來會是這樣
+
+	/Users/karen/Documents/karen的全部資料夾/程式教學文件/golang/example2/src/hello/hello.go
+
+8. 打開終端機
+	指到main.go的位置
+	在執行一次hello.go
+
+	go run main.go
+
+9. 大功告成

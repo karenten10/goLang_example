@@ -1,0 +1,36 @@
+mac安裝步驟
+1. 到go lang官網下載安裝檔
+	
+
+	https://golang.org/dl/
+	
+	下載好的檔案應該會長這樣
+	go1.12.1.darwin-amd64.pkg
+
+2. 一直按下一步裝好
+
+3. 隨意找個資料夾,寫第一支程式
+	檔名為main.go
+
+	把以下內容貼到你的文字編輯器中
+
+	=== 請從下一行開始照著打字 start ===
+	package main
+
+	import "fmt"
+
+	func main() {
+		fmt.Println("Hello, Go Lang")
+		fmt.Println("哈囉，Go語言")
+	}
+	=== 打字結束 end ===
+
+4. 開終端機，路徑指到剛剛隨意新增的資料夾
+	比如我是存在這個地方
+
+	/Users/karen/Documents/karen的全部資料夾/程式教學文件/golang/examples/
+
+5. 執行: go run main.go
+
+6. 大功告成
+	

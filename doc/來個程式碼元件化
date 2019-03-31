@@ -1,0 +1,103 @@
+1. 聽說程式碼跟UI一樣都要元件化
+
+2. 所以我決定開另一個資料夾叫做example2
+	來開始第2範例
+
+3. 把列印的部分移到另一支程式hello.go
+	
+	存到example2
+
+	=== 打字開始 ===
+	package hello
+
+	import "fmt"
+
+	func HelloWorld() {
+		fmt.Println("===> Hello World")
+
+	}
+
+	=== 打字結束 ===
+
+4. 然後main.go改成這樣
+	
+	也是存到example2
+
+	=== 打字開始 ===
+	package main
+
+	import "hello"
+
+	func main() {
+		hello.HelloWorld()
+	}
+
+	=== 打字結束 ===
+
+5. 到終端機跑main
+
+	比如我是存在這個地方
+
+	/Users/karen/Documents/karen的全部資料夾/程式教學文件/golang/example2/
+
+	執行: go run main.go
+
+6. 咦，結果出現這個
+
+	===
+	main.go:3:8: cannot find package "hello" in any of:
+	/usr/local/go/src/hello (from $GOROOT)
+	/Users/karen/go/src/hello (from $GOPATH)
+	===
+
+7. 意思就是說，hello.go要存到
+
+	/Users/karen/go/src/hello (from $GOPATH)
+
+	為什麼呢？
+	這個有學過java的classpath就知道了
+	沒有學過我現在也可以跟你說
+
+	因為go會去哪裡找被引用的檔案(hello)呢?
+	就是到$GOPATH的路徑
+
+	而如果沒有自己特別指定
+	go預設的$GOPATH是在:
+	$HOME/go
+
+	所以我總結一下
+	$HOME=/Users/[您的使用者名稱]
+	$GOPATH=$HOME/go
+
+	說了那麼多，
+	我的GOPATH就是：
+	/Users/karen/go/
+
+	所以如果要可以用hello.go
+	我們就要把hello.go存到$GOPATH/src/hello
+
+	因為go預期我們把原始碼都存到src資料夾下
+
+	拿我自己來講就是把hello.go搬到/Users/karen/go/src/hello
+
+8. 把hello.go搬到$GOPATH/src/hello
+
+	拿我自己來講
+	就是另開一個終端機
+
+	用mkdir指令一層一層把資料夾新增好
+	結果像這樣
+	/Users/karen/go/src/hello
+
+	然後把hello.go搬到/Users/karen/go/src/hello	
+
+9. 再去執行: go run main.go
+	
+	以我來講，
+	要先回到一開始的終端機，
+	指到/Users/karen/Documents/karen的全部資料夾/程式教學文件/golang/example2/
+	的那個
+
+10. 大功告成
+	===> Hello World
+
